@@ -1,0 +1,248 @@
+<html>
+    <head>
+        <title>HTML Exercise 1 April 2020</title>
+        
+        <style>
+            body{
+                background-color:#FFD166;
+                margin:0px;
+                font-family:monospace;
+                font-size:20px;
+            }
+            .register{
+                display:flex;
+                background-color:#FFD166;
+                border-radius:30px;
+                justify-content:center;
+                font-size:32px;
+                font-weight:900;
+                text-shadow:0px 2px darkorange;
+                border-bottom:5px solid darkorange;
+                color:#26547C;
+                margin-bottom:20px;
+            }
+            .register:hover{
+                color:darkorange;
+                text-shadow:0px 2px lightyellow;
+                border-bottom-color:lightyellow;
+            }
+            .form-container{
+                display:flex;
+                justify-content:center;
+            }
+            .opt{
+                font-size:16px;
+                color:azure;
+                padding-left:5px;
+                padding-right:10px;
+            }
+            .opt-check{
+                font-size:13.3px;
+                color:azure;
+                padding-left:5px;
+            }
+            label{
+                font-size:20px;
+                font-weight:900;
+                text-shadow:1.5px 1.5px #26547C;
+                color:#94EDD6;
+            }
+            input,select{
+                width:310px;
+                padding:7px 10px;
+                font-family:monospace;
+                font-size:16px;
+                border-width:0px;
+                border-radius:10px;
+                background-color:lightcyan;
+                color:#26547C;
+                box-shadow:0px 0px 10px #777;
+            }
+            input[type="radio"],input[type="checkbox"]{
+                width:auto;
+                box-shadow:none;
+            }
+            input[type="radio"]:hover,input[type="checkbox"]:hover{
+                box-shadow:none;
+            }
+            input:hover,select:hover{
+                box-shadow:0px 0px 10px inset #AAA;
+            }
+            .form #submit{
+                width:auto;
+                padding:15px;
+                font-weight:700;
+                border-radius:30px;
+                box-shadow:0px 0px 10px #777;
+            }
+            .form #submit:hover{
+                box-shadow:0px 0px 10px inset #777;
+            }
+            .form{
+                margin:22px;
+                background-color:#EF476F;
+                box-shadow:0px 4px 15px black;
+                padding:30px;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                border-radius:15px;
+                border-top:12.5px solid #33DDB1;
+                border-top-style:outset;
+                border-bottom:12.5px solid #33DDB1;
+                border-bottom-style:inset;
+            }
+            .form:hover{
+                box-shadow:0px 1px 10px black;
+            }
+            form{
+                margin:0px;
+            }
+            td{
+                padding:5px;
+                display:flex;
+            }
+            .list-container{
+                display:flex;                
+                justify-content:center;
+            }
+            .head-title{
+                font-size:32px;
+                margin-bottom:20px;
+                font-weight:900;
+                text-shadow:0px 2px #FFD97D;
+                box-shadow:0px 5px #FFD97D;
+                border-bottom:1.5px solid #312F2F;
+                color:#312F2F;
+                text-align:center;
+                width:100px;
+                background-color:white;
+            }
+            .head-title:hover{
+                text-shadow:0px 2px lightgray;
+                box-shadow:0px 5px lightgray;
+                color:dimgray;
+            }
+            .list{
+                margin:22px;
+                background-color:#312F2F;
+                box-shadow:0px 4px 15px black;
+                padding:30px;
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
+                border-radius:15px;
+                border-top:12.5px solid #FFD97D;
+                border-top-style:outset;
+                border-bottom:12.5px solid #FFD97D;
+                border-bottom-style:inset;
+                color:#FDFFF7;
+                font-size:20px;
+                font-weight:900;
+                text-shadow:1.5px 1.5px lightslategray;
+            }
+            .list:hover{
+                box-shadow:0px 1px 10px black;
+            }
+            ul{
+                margin:0px;
+            }
+            ul.a{
+                list-style-type:disc;
+            }
+            ul.b{                
+                list-style-type:circle;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="form-container">
+            <div class="form">
+                <form>
+                    <table>
+                        <tr>
+                            <td class="register">Registration</td>
+                        <tr>
+                            <td><label for="fname">First Name</label></td>
+                            <td><input type="text" id="fname" placeholder="First Name"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="lname">Last Name</label></td>
+                            <td><input type="text" id="lname" placeholder="Last Name"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="gender">Gender</label></td>
+                            <td>
+                                <input type="radio" id="gen-male" name="gender" value="Male">
+                                <label class="opt"for="gen-male">Male</label>
+                                <input type="radio" id="gen-female" name="gender" value="Female">
+                                <label class="opt" for="gen-female">Female</label>
+                                <input type="radio" id="gen-other" name="gender" value="Other">
+                                <label class="opt" for="gen-other">Other</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="department">Department</label></td>
+                            <td>
+                                <select name="department">
+                                    <option value="soas">Agricultural Science</option>
+                                    <option value="soap">Architecture & Planning</option>
+                                    <option value="sbas">Basic & Applied Sciences</option>
+                                    <option value="soet">Engineering & Technology</option>
+                                    <option value="soed">Education</option>
+                                    <option value="sof">Fashion</option>
+                                    <option value="soh">Humanities</option>
+                                    <option value="sohmct">Hotel Management & Catering Technology</option>
+                                    <option value="sjmc">Journalism & Mass Communication</option>
+                                    <option value="sols">Legal Studies</option>
+                                    <option value="somc">Management & Commerce</option>
+                                    <option value="smas">Medical & Allied Sciences</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Email</label></td>
+                            <td><input type="email" id="email" placeholder="eg. abhi@zeborg.xyz"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="username">Username</label></td>
+                            <td><input type="text" id="username" placeholder="Username"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="password">Password</label></td>
+                            <td><input type="password" id="password" placeholder="Password"></td>
+                        </tr>
+                        <tr>
+                            <td style="margin-top:10px;">
+                                <input type="checkbox" class="opt" id="notif">
+                                <label class="opt-check" style="width:280px;" for="notif">Receive latest notifications via email</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="justify-content:center;margin-top:15px;"><input type="submit" id="submit" value="Submit"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        
+        <div class="list-container">
+            <div class="list">
+                <div class="head-title">List</div>
+                <ul class="a">
+                    <li>Coffee</li>
+                    <li>
+                        Tea
+                        <ul class="b">
+                            <li>Black Tea</li>
+                            <li>Green Tea</li>
+                        </ul>
+                    </li>
+                    <li>Milk</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
